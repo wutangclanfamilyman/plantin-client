@@ -12,7 +12,7 @@ const NEWS = [
   {
     id: 1,
     title: "Tips & Tricks For Cutting",
-    text: "Pruning, like any other skill, requires knowing what you are doing to achieve success. The old idea that anyone with a chain saw or a pruning saw can be a landscape pruner is far from the truth. More trees are killed or ruined each year from improper pruning than by pests. Remember that pruning is the removal or...",
+    text: "Pruning, like any other skill, requires knowing what you are doing to achieve success. The old idea that anyone with a chain saw or a pruning saw can be a landscape pruner is far from the truth. More trees are killed or ruined each year from improper pruning than by pests. Remember that pruning is the removal or... Pruning, like any other skill, requires knowing what you are doing to achieve success. The old idea that anyone with a chain saw or a pruning saw can be a landscape pruner is far from the truth. More trees are killed or ruined each year from improper pruning than by pests. Remember that pruning is the removal or...",
     date: "2025-04-20",
     timeToRead: "7 min",
     image: "/images/last-news-image.png",
@@ -21,7 +21,7 @@ const NEWS = [
   {
     id: 2,
     title: "Professional Repot",
-    text: "Repotting a plant can seem like a difficult task because a lot of things can go wrong – you can damage...",
+    text: "Repotting a plant can seem like a difficult task because a lot of things can go wrong – you can damage. Repotting a plant can seem like a difficult task because a lot of things can go wrong – you can damage.",
     date: "2025-04-17",
     timeToRead: "12 min",
     image: "/images/news/1.png",
@@ -30,7 +30,7 @@ const NEWS = [
   {
     id: 3,
     title: "Professional Repot",
-    text: "Repotting a plant can seem like a difficult task because a lot of things can go wrong – you can damage...",
+    text: "Repotting a plant can seem like a difficult task because a lot of things can go wrong – you can damage. Repotting a plant can seem like a difficult task because a lot of things can go wrong – you can damage.",
     date: "2025-04-17",
     timeToRead: "7 min",
     image: "/images/news/2.png",
@@ -39,7 +39,7 @@ const NEWS = [
   {
     id: 4,
     title: "Plant pot secrets",
-    text: "Repotting a plant can seem like a difficult task because a lot of things can go wrong – you can damage...",
+    text: "Repotting a plant can seem like a difficult task because a lot of things can go wrong – you can damage. Repotting a plant can seem like a difficult task because a lot of things can go wrong – you can damage.",
     date: "2025-04-10",
     timeToRead: "10 min",
     image: "/images/news/3.png",
@@ -48,7 +48,7 @@ const NEWS = [
   {
     id: 5,
     title: "Watering mastery",
-    text: "Repotting a plant can seem like a difficult task because a lot of things can go wrong – you can damage...",
+    text: "Repotting a plant can seem like a difficult task because a lot of things can go wrong – you can damage. Repotting a plant can seem like a difficult task because a lot of things can go wrong – you can damage.",
     date: "2025-04-13",
     timeToRead: "10 min",
     image: "/images/news/4.png",
