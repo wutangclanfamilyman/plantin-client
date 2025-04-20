@@ -1,0 +1,82 @@
+@use "../vars";
+
+.b-unlimited {
+  margin: 3rem 0;
+  grid-column: span 3;
+  border-radius: 0.75rem;
+  background: vars.$green-gradient;
+  padding: 1.5rem 18rem 1.5rem 1.5rem;
+  position: relative;
+  &__logo {
+    margin-bottom: 1.5rem;
+  }
+  &__title {
+    color: vars.$color-green-header;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  &__subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  &__saly {
+    .saly {
+      &-triangle {
+        &-small {
+          position: absolute;
+          right: 15rem;
+          top: 1rem;
+        }
+        &-large {
+          position: absolute;
+          right: 0.5rem;
+          top: 1.5rem;
+        }
+      }
+      &-circle {
+        position: absolute;
+        top: 60%;
+        right: 12%;
+      }
+      &-square {
+        position: absolute;
+        top: 76%;
+        right: 27%;
+      }
+      &-sally {
+        position: absolute;
+        top: -4%;
+        right: -1.5%;
+      }
+      &-plant {
+        top: 10%;
+        right: 21%;
+        position: absolute;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: vars.$WIDTH_MOBILE_DEVICE) {
+  .b-unlimited {
+    margin: 0;
+    padding: 1rem;
+    &__saly {
+      display: none;
+    }
+    &__title {
+      font-size: 1.5rem;
+    }
+    &__subtitle {
+      font-size: 1.125rem;
+      margin-bottom: 1rem;
+    }
+    &__button {
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}

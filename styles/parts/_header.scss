@@ -1,0 +1,154 @@
+@use "../vars";
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: vars.$color-white;
+  box-shadow: 0px 0.4px 6.5px 0px rgba(0, 0, 0, 0.05),
+    0px 2px 40px 0px rgba(0, 0, 0, 0.1);
+  &__logo {
+    display: none;
+    img {
+      height: 1.5rem;
+    }
+  }
+  &__menu {
+    padding: 20px 0;
+    &-item {
+      a {
+        color: vars.$color-dark-text;
+        text-decoration: none;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 1px;
+          background: vars.$color-dark-text;
+        }
+        &:hover {
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  &__toggle-menu {
+    display: none;
+  }
+  &__search {
+    position: relative;
+    &-toggle {
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+    &-field {
+      input {
+        width: 200px;
+        height: 35px;
+        border: none;
+        &:active,
+        &:focus {
+          border-bottom: 1px solid vars.$color-grey;
+        }
+      }
+    }
+    &__account {
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+    &-container {
+      position: absolute;
+      top: -400%;
+      padding: 1rem;
+      background-color: vars.$color-white;
+      border-radius: 0.75rem;
+      opacity: 0;
+      right: 0;
+      box-shadow: 0px 0.4px 6.5px 0px rgba(0, 0, 0, 0.05),
+        0px 2px 40px 0px rgba(0, 0, 0, 0.1);
+      form {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        input {
+          border-radius: 0.25rem;
+          padding: 0.5rem 1rem;
+          box-shadow: 0px 0.47px 2.21px 0px rgba(0, 0, 0, 0.1);
+          max-width: 10rem;
+        }
+        button {
+          font-size: 0.75rem;
+          padding: 0.5rem 1rem;
+        }
+      }
+      &.open {
+        top: 124%;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: vars.$WIDTH_MOBILE_DEVICE) {
+  .header {
+    &__logo {
+      padding: 1.25rem 0;
+      display: block;
+    }
+    &__menu {
+      padding-top: 0;
+      position: fixed;
+      top: 4rem;
+      left: 0;
+      background-color: vars.$color-white;
+      height: calc(100vh - 4rem);
+      width: 100%;
+      left: -200%;
+      &-list {
+        flex-direction: column;
+        padding: 1rem;
+      }
+      &.open {
+        left: 0;
+      }
+    }
+    &__toggle-menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__account {
+      display: none;
+    }
+    &__search {
+      &-container {
+        position: fixed;
+        top: -100%;
+        border-radius: 0;
+        padding: 1rem 0.5rem;
+        left: 0;
+        z-index: 99;
+        &.open {
+          top: 4rem;
+        }
+        form {
+          input {
+            width: 75%;
+            font-size: 0.825rem;
+            max-width: none;
+          }
+        }
+      }
+    }
+  }
+}

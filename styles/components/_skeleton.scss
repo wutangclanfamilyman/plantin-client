@@ -1,0 +1,42 @@
+@use "../vars";
+.skeleton {
+  &__texture {
+    background-color: vars.$color-skeleton;
+    animation: blink 1.5s infinite ease-in-out;
+  }
+  &__image {
+    width: 100%;
+    height: 15rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  &__date {
+    width: 100%;
+    height: 0.75rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+  }
+  &__title {
+    width: 100%;
+    height: 1.5rem;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+  &__text {
+    width: 100%;
+    height: 4.875rem;
+    border-radius: 0.25rem;
+  }
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}

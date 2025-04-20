@@ -1,0 +1,82 @@
+@use "../vars";
+
+.news {
+  margin-bottom: 3.5rem;
+  &__category {
+    font-size: 0.875rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: vars.$color-grey;
+    width: 100%;
+    padding: 1rem 0;
+    border-top: 1px solid vars.$color-separator;
+  }
+  &--top {
+    .news-one {
+      &__image {
+        img {
+          height: 364px;
+        }
+      }
+    }
+  }
+}
+
+.news-one {
+  &__image {
+    img {
+      width: 100%;
+      border-radius: 0.75rem;
+      object-fit: cover;
+      height: 240px;
+      object-position: center;
+    }
+  }
+  &__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  &__date {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: vars.$color-date;
+    margin: 1rem 0 0.5rem 0;
+  }
+  &__text {
+    color: vars.$color-text;
+  }
+}
+
+@media screen and (max-width: vars.$WIDTH_MOBILE_DEVICE) {
+  .news {
+    margin-bottom: 1.5rem;
+    &__category {
+      padding: 0.5rem 0 1rem;
+    }
+    &--top {
+      .news-one {
+        &__image {
+          img {
+            height: 240px;
+          }
+        }
+      }
+    }
+  }
+  .news-one {
+    grid-column: span 3;
+    &__date {
+      line-height: 1.5rem;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    &__title {
+      font-size: 1.5rem;
+      line-height: 100%;
+      margin-bottom: 0.5rem;
+    }
+  }
+}

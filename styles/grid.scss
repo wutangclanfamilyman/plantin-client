@@ -1,0 +1,68 @@
+@use "./vars";
+
+.container {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.justify {
+  &-right {
+    justify-content: flex-end;
+  }
+  &-left {
+    justify-content: flex-start;
+  }
+  &-center {
+    justify-content: center;
+  }
+  &-between {
+    justify-content: space-between;
+  }
+}
+
+.items {
+  &-right {
+    align-items: flex-end;
+  }
+  &-left {
+    align-items: flex-start;
+  }
+  &-center {
+    align-items: center;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+@each $key, $value in vars.$gaps {
+  .gap-#{$key} {
+    gap: $value;
+  }
+  .gap-#{$key}-md {
+    @media screen and (min-width: 768px) {
+      gap: $value;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+}
+
+@mixin generate-grid($class, $cols) {
+  .#{$class} {
+    display: grid;
+    grid-template-columns: repeat(#{$cols}, 1fr);
+  }
+}
+
+@include generate-grid("grid-2", 2);
+@include generate-grid("grid-3", 3);

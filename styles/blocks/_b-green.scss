@@ -1,0 +1,102 @@
+@use "../vars";
+
+.b-green {
+  margin: 3rem 0;
+  &__wrap {
+    border-radius: 1rem;
+    background-color: vars.$color-light-green;
+    position: relative;
+    padding: 3.5rem 20rem 3.5rem 3.5rem;
+    h1 {
+      color: vars.$color-green-header;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1.125rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      &.mobile {
+        font-weight: normal;
+        @media screen and (min-width: 768px) {
+          display: none;
+        }
+      }
+    }
+  }
+  &__form {
+    &-control {
+      width: 100%;
+      max-width: 522px;
+      position: relative;
+      display: inline-block;
+      input {
+        background-color: #fff;
+        padding: 1rem 3.5rem 1rem 1rem;
+        width: 100%;
+        border-radius: 0.75rem;
+        box-shadow: 0px 0.47px 2.21px 0px rgba(0, 0, 0, 0.02);
+        font-size: 1rem;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("/images/search.svg");
+        width: 1.5rem;
+        height: 1.5rem;
+        right: 1rem;
+        top: 1rem;
+      }
+    }
+  }
+  &__image {
+    svg,
+    img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      max-width: 35%;
+    }
+  }
+}
+
+@media screen and (max-width: vars.$WIDTH_MOBILE_DEVICE) {
+  .b-green {
+    margin: 1.5rem 0 1.125rem 0;
+    &__image {
+      display: none;
+    }
+    &__wrap {
+      padding: 1rem;
+      h1 {
+        font-size: 1.5rem;
+      }
+      p.temp {
+        display: none;
+      }
+      p.mobile {
+        display: block;
+      }
+    }
+    &__form {
+      &-control {
+        width: 100%;
+        input {
+          max-width: none;
+          width: 100%;
+          font-size: 0.875rem;
+          padding: 0.625rem 2rem 0.625rem 1rem;
+        }
+        &::after {
+          width: 1rem;
+          height: 1rem;
+          top: 0.75rem;
+          right: 0.75rem;
+        }
+      }
+    }
+  }
+}

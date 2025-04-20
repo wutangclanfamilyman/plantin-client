@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/images/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlantIn News</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="row justify-between items-center">
+          <div class="header__logo">
+            <a href="/">
+              <img src="/images/logo.svg" />
+            </a>
+          </div>
+          <div class="header__menu" id="header-menu">
+            <ul class="header__menu-list gap-16 gap-24-md flex">
+              <li class="header__menu-item">
+                <a href="#">Discover</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#">My plants</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#">Diseases</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#">Blog</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#">FAQ</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#">Contact us</a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="header__user-panel row justify-right items-center gap-16 gap-24-md"
+          >
+            <div class="header__search row items-center">
+              <button class="header__search-toggle" id="toggle-search">
+                <img src="/images/search-icon.svg" />
+              </button>
+              <div id="search-container" class="header__search-container">
+                <form class="row justify-center gap-16">
+                  <input
+                    class="search-input"
+                    name="search"
+                    placeholder="Search..."
+                  />
+                  <button class="btn btn-green">Search</button>
+                </form>
+              </div>
+            </div>
+            <div class="header__account flex items-center justify-center">
+              <button class="header__account-toggle">
+                <img src="/images/user-account.png" />
+              </button>
+            </div>
+            <div class="header__toggle-menu">
+              <button class="btn btn-menu" id="mobile-menu-toggle">
+                <div class="btn-menu-icon">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="row">
+          <li class="breadcrumbs__item">
+            <a href="#">Home</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="#">Blog</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <main>
+      <div class="b-green">
+        <div class="container">
+          <div class="b-green__wrap">
+            <h1>Stay always tuned with planting trends</h1>
+            <p class="mobile">
+              <strong>Tips & Tricks</strong> selected specially for
+              <strong>you</strong>!
+            </p>
+            <p class="temp">
+              Current temperature is: <span id="current-temp">24</span>°C
+            </p>
+            <div id="search-news-app"></div>
+
+            <div class="b-green__image">
+              <img src="/images/banner-image.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="news-app"></div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row justify-between">
+          <div class="footer__menu">
+            <ul class="row items-center">
+              <li>
+                <a href="#">Terms of Service</a>
+              </li>
+              <div class="separator"></div>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+              <div class="separator"></div>
+              <li>
+                <a href="#">Subscription Policy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__copyright">
+            ©Copyright © 2020 PlantIn. <span class="break"></span> All rights
+            reserved
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/src/app.ts"></script>
+  </body>
+</html>

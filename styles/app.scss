@@ -1,0 +1,24 @@
+@use "./fonts.scss";
+@use "./grid.scss";
+@use "./global.scss";
+
+// parts
+
+@use "./parts/header";
+@use "./parts/footer";
+
+// components
+
+@use "./components/breadcrumbs";
+@use "./components/red-badge";
+@use "./components/buttons";
+@use "./components/skeleton";
+@use "./components/search";
+
+// Blocks
+
+@use "./blocks/b-green";
+@use "./blocks/last-article";
+@use "./blocks/news";
+@use "./blocks/b-unlimited";
+@use "./blocks/not-found";

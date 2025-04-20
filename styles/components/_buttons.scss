@@ -1,0 +1,80 @@
+@use "../vars";
+
+.btn {
+  font-size: 1rem;
+  font-weight: 500;
+  display: inline-block;
+  color: vars.$color-white;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  &-green {
+    background: vars.$color-green-header;
+  }
+  &-menu {
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-icon {
+      position: relative;
+      width: 18px;
+      height: 12px;
+    }
+    span {
+      &::after {
+        content: "";
+        position: absolute;
+        width: 1.125rem;
+        background-color: vars.$color-toggle;
+        height: 2px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 0.25rem;
+      }
+      &:nth-child(1) {
+        &::after {
+          top: 0px;
+          right: 0;
+          width: 0.75rem;
+          transform: none;
+        }
+      }
+      &:nth-child(3) {
+        &::after {
+          bottom: 0px;
+          right: 0;
+          top: auto;
+          width: 0.75rem;
+          transform: none;
+        }
+      }
+    }
+    &.open {
+      span {
+        &:nth-child(2) {
+          display: none;
+        }
+        &:nth-child(1) {
+          &::after {
+            width: 1.25rem;
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+          }
+        }
+        &:nth-child(3) {
+          &::after {
+            width: 1.25rem;
+            top: 50%;
+            transform: translateY(-50%) rotate(-45deg);
+            bottom: auto;
+          }
+        }
+      }
+    }
+  }
+}

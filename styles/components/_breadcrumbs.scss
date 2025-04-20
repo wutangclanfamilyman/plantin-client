@@ -1,0 +1,35 @@
+@use "../vars";
+
+.breadcrumbs {
+  &__item {
+    position: relative;
+    margin-right: 2.5rem;
+    a {
+      color: vars.$color-grey;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1.5rem;
+      height: 1.5rem;
+      background: url("/images/chevron-left.svg") no-repeat center;
+      background-size: 100%;
+      left: calc(100% + 0.5rem);
+    }
+  }
+}
+
+@media screen and (max-width: vars.$WIDTH_MOBILE_DEVICE) {
+  .breadcrumbs {
+    &__item {
+      padding-left: 1.5rem;
+      margin-right: 0.25rem;
+      &::after {
+        transform: translateY(-50%) rotate(180deg);
+        left: 0;
+      }
+    }
+  }
+}

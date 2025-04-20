@@ -1,0 +1,51 @@
+@use "../vars";
+
+.footer {
+  padding: 5rem 0;
+  &__menu {
+    ul {
+      li {
+        a {
+          color: vars.$color-grey;
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+  &__copyright {
+    color: vars.$color-grey;
+    font-size: 0.875rem;
+    .break {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: vars.$WIDTH_MOBILE_DEVICE) {
+  .footer {
+    margin-top: 5rem;
+    padding: 1rem 0;
+    &__menu {
+      margin: 0 auto 1.5rem;
+      flex: 1 0 100%;
+      .separator {
+        display: none;
+      }
+      ul {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        row-gap: 0.5rem;
+      }
+    }
+    &__copyright {
+      margin: 0 auto;
+      flex: 1 0 100%;
+      text-align: center;
+      .break {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use "../vars.scss";
+
+.red-badge {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  color: vars.$color-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 78px;
+  border-radius: 0.25rem;
+  height: 36px;
+  background-image: url("/images/badge.svg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 1rem;
+}
