@@ -6,6 +6,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (tempNode) {
     const temp = await APIService.getTemp();
 
-    if (temp) tempNode.innerText = temp?.toString();
+    if (temp) tempNode.innerText = temp?.toString() + " °C";
   }
 });
