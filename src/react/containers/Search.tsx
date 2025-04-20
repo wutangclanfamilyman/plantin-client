@@ -9,7 +9,7 @@ const SearchNews = () => {
   const handleSearch = async (value: string) => {
     toggleLoading(true);
 
-    await delay(1500);
+    await delay(1000);
 
     setSearch(value);
 

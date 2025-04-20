@@ -206,7 +206,7 @@ const NewsApp = () => {
   if (search && !isLoading)
     return (
       <div>
-        <NewsContainer data={news} />
+        <NewsContainer isSearch={true} data={news} />
       </div>
     );
 

@@ -4,16 +4,22 @@ import { NEWS_ONE } from "../../types";
 
 interface NewsContainerProps {
   data: NEWS_ONE[];
+  isSearch?: boolean;
 }
 
-const NewsContainer: React.FC<NewsContainerProps> = ({ data = [] }) => {
+const NewsContainer: React.FC<NewsContainerProps> = ({
+  data = [],
+  isSearch = false,
+}) => {
   if (!data.length) return <></>;
 
   return (
     <div className="news ">
       <div className="container">
         <div className="row">
-          <div className="news__category">Interesting</div>
+          <div className="news__category">
+            {isSearch ? `Found ${data.length} posts` : "Interesting"}
+          </div>
         </div>
         <div className="grid grid-1 grid-3-md gap-24 gap-32-md">
           {data.map((item: NEWS_ONE, index: number) => (
